@@ -1,6 +1,7 @@
 from modules.binary_wrapper import BinaryWrapper
 import sys
 
+errmsg = "Unknown request. Please try again."
 port1 = 18
 port2 = 24
 port3 = 12
@@ -37,6 +38,9 @@ while True:
     try:
         num = int(input("Input a number between 0-15. 16 to exit: "))
     except:
-        print("Unknown request. Please try again.")
-
-    functionality[num]()
+        print(errmsg)
+    
+    if num > 16:
+        print(errmsg)
+    else:
+        functionality[num]()
