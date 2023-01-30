@@ -1,4 +1,4 @@
-import RPi.GPIO
+import RPi.GPIO as GPIO
 from .gpio_wrapper import GpioWrapper
 
 class BinaryWrapper(GpioWrapper):
@@ -13,10 +13,10 @@ class BinaryWrapper(GpioWrapper):
         port2 = port2
         port3 = port3
         port4 = port4
-        self.gpio.setup(port1, self.gpio.OUT)
-        self.gpio.setup(port2, self.gpio.OUT)
-        self.gpio.setup(port3, self.gpio.OUT)
-        self.gpio.setup(port4, self.gpio.OUT)
+        self.gpio.setup(port1, GPIO.OUT)
+        self.gpio.setup(port2, GPIO.OUT)
+        self.gpio.setup(port3, GPIO.OUT)
+        self.gpio.setup(port4, GPIO.OUT)
 
     def test(self):
         self.gpio.output(self.port1, True)
