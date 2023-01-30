@@ -1,18 +1,13 @@
-import RPi.GPIO as GPIO;
-import time;
+from modules.binary_wrapper import BinaryWrapper
+import time
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(18, GPIO.OUT)
-GPIO.setup(24, GPIO.OUT)
-GPIO.setup(12, GPIO.OUT)
-GPIO.setup(16, GPIO.OUT)
+port1 = 18
+port2 = 24
+port3 = 12
+port4 = 16
 
-GPIO.output(18, True)
-GPIO.output(24, True)
-GPIO.output(12, True)
-GPIO.output(16, True)
-time.sleep(2)
-GPIO.output(18, False)
-GPIO.output(24, False)
-GPIO.output(12, False)
-GPIO.output(16, False)
+bw = BinaryWrapper(port1, port2, port3, port4)
+
+bw.test()
+time.sleep(10)
+bw.off()
