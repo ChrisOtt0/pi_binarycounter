@@ -36,7 +36,6 @@ while True:
     num = 0
     try:
         num = int(input("Input a number between 0-15. 16 to exit."))
-        break
     except:
         print("Unknown request. Please try again.")
 
