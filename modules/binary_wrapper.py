@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
-from .gpio_wrapper import GpioWrapper
 
-class BinaryWrapper(GpioWrapper):
+class BinaryWrapper:
+    gpio = GPIO
     port1 = 0
     port2 = 0
     port3 = 0
