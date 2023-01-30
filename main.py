@@ -1,16 +1,16 @@
 from modules.binary_wrapper import BinaryWrapper
 import sys
 
-def close(bw: BinaryWrapper):
-    bw.zero()
-    sys.exit()
-
 port1 = 18
 port2 = 24
 port3 = 12
 port4 = 16
 
 bw = BinaryWrapper(port1, port2, port3, port4)
+
+def close():
+    bw.zero()
+    sys.exit()
 
 functionality = {
     0: bw.zero,
@@ -35,7 +35,7 @@ functionality = {
 while True:
     num = 0
     try:
-        num = int(input("Input a number between 0-15. 16 to exit."))
+        num = int(input("Input a number between 0-15. 16 to exit: "))
     except:
         print("Unknown request. Please try again.")
 
