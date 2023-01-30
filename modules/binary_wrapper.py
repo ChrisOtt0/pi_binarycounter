@@ -8,7 +8,7 @@ class BinaryWrapper:
     port4 = 0
 
     def __init__(self, port1, port2, port3, port4):
-        super().__init__()
+        self.gpio.setmode(GPIO.BCM)
         port1 = port1
         port2 = port2
         port3 = port3
