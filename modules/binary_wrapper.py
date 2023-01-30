@@ -9,14 +9,14 @@ class BinaryWrapper:
 
     def __init__(self, port1, port2, port3, port4):
         self.gpio.setmode(GPIO.BCM)
-        port1 = port1
-        port2 = port2
-        port3 = port3
-        port4 = port4
-        self.gpio.setup(port1, GPIO.OUT)
-        self.gpio.setup(port2, GPIO.OUT)
-        self.gpio.setup(port3, GPIO.OUT)
-        self.gpio.setup(port4, GPIO.OUT)
+        self.port1 = port1
+        self.port2 = port2
+        self.port3 = port3
+        self.port4 = port4
+        self.gpio.setup(self.port1, GPIO.OUT)
+        self.gpio.setup(self.port2, GPIO.OUT)
+        self.gpio.setup(self.port3, GPIO.OUT)
+        self.gpio.setup(self.port4, GPIO.OUT)
 
     def test(self):
         self.gpio.output(self.port1, True)
