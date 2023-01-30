@@ -1,5 +1,5 @@
 import RPi.GPIO
-from gpio_wrapper import GpioWrapper
+from .gpio_wrapper import GpioWrapper
 
 class BinaryWrapper(GpioWrapper):
     port1 = 0
